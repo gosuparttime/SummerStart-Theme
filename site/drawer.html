@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+  //$(".collapse").collapse('toggle');
+  //$(".hide-me").hide();
+});
+</script>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container">
+<nav class="nav">
+      <ul class="unstyled inline">
+        <li><a href="#menu1" data-toggle="collapse" data-parent="#drawer">Item 1</a></li>
+        <li><a href="#menu2" data-toggle="collapse" data-parent="#drawer">Item 2</a></li>
+        <li><a href="#menu3" data-toggle="collapse" data-parent="#drawer">Item 3</a></li>
+      </ul>
+    </nav>
+  <div id="drawer" class="accordion">
+   
+    <div class="accordion-group">
+      <div id="menu1" class="collapse hide-me">Hello number 1</div>
+      <div id="menu2" class="collapse hide-me">Hello number 2</div>
+      <div id="menu3" class="collapse hide-me">Hello number 3</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

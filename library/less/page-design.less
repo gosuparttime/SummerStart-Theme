@@ -1,0 +1,230 @@
+//
+// Page Design
+// --------------------------------------------------
+#sunburst{
+    background: @yellowLight;
+    background-image: url(../images/sunburst.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    min-height: 125px;
+    padding-bottom: 1em;
+}
+#inner-header{
+    position: relative;
+    padding-top: 1em;
+    min-height: 110px;
+}
+#rollinghills{
+    background-image: url(../images/orange-swirl.png);
+    background-repeat: repeat-x;
+    background-position: center top;
+    margin-top: -25px;
+    padding-top: 100px;
+}
+#branding{
+    //position: relative;
+    #logo{
+        top: 50px;
+        //left: 0;
+        //right: 0;
+        position: absolute;
+    }
+}
+#wrapper{
+    //padding-top: 100px;
+    background-color:@white;
+    .border-radius(5px);
+    //overflow: hidden;
+}
+#inner-wrap{
+
+    padding: 3em;
+}
+#utility_links{
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-align: right;
+        li{
+            display: inline-block;
+            margin-left: 1em;
+        }
+    }
+}
+#inner-footer{
+    color: @white;
+    padding-top: 2em;
+    font-size: @fontSizeSmall;
+    a{
+        color: @white;
+    }
+    .go-up{
+        text-transform: uppercase;
+        
+    }
+}
+#footer-nav{
+    margin: 1em 0 .5em 0;
+    border-top: 1px solid @white;
+    padding-top: 1em;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li{
+            float: left;
+            margin-right: 1em;
+            border-right: 1px solid @white;
+            &:last-child{
+                border-right: none;
+            }
+            a{
+                text-transform: uppercase;
+                font-weight: 700;
+                color: @white;
+                display: block;
+                margin-right: 1em;
+            }
+        }
+    }
+}
+#extra-nav{
+    padding-top: 1em;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li{
+            display: inline;
+            margin-right: .5em;
+        }
+    }
+}
+.btn-search{
+    display: block;
+    padding: .5em .75em;
+    //font-family: @serifFontFamily;
+    color: @white;
+    background-color: @yellow;
+    margin-right: 8px;
+    .border-bottom-left-radius(5px);
+    .border-bottom-right-radius(5px);
+     &:hover, &:focus, &.focused{
+            text-decoration: none;
+            color: @white;
+        
+    }
+    i{
+        margin-left: .2em;
+    }
+}
+.nav-content{
+    padding: 0 3em;
+}
+ul.drawer-nav{
+    font-size: @fontSizeLarge;
+    > li{
+        margin-bottom: .5em;
+    }
+}
+ul#main-navigation{
+  padding: 1em 0em;
+  li.nav-link{
+      position: relative;
+      padding: 0 .5em;
+      div.caret {
+      display: block;
+      position: absolute;
+      left: 45%;
+      right: 50%;
+      width: 0;
+      height: 0;
+      vertical-align: top;
+      text-align: center;
+      border-top:   10px solid @blueDark;
+      border-right: 15px solid transparent;
+      border-left:  15px solid transparent;
+      content: "";
+    }
+    
+    // Place the caret
+    div.caret {
+      margin-top: 8px;
+      margin-left: 2px;
+      display: none;
+    }
+    a:hover{
+        div.caret{
+            display: block;
+        }
+    }
+  }
+}
+.carousel-swirl{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#banner-image{
+    position: relative;
+}
+.quotation{
+    font-weight: bold;
+    //font-size: @fontSize2;
+    color: @grayDeep;
+    //margin-top: .33em;
+    //line-height: 0px;
+    display: inline-block;
+    &.right{
+        margin-left: .1em;
+        margin-right: -1em;
+    }
+    &.left{
+        margin-right: .1em;
+    }
+}
+.factoid{
+    p {
+        margin-top: .25em;
+        line-height: 1.3em;
+        color: @gray;
+    }
+}
+.widget{
+    margin-bottom: 2em;
+}
+.center-block{
+    display: block;
+    width: auto;
+    padding: 1em;
+    text-align: center;
+}
+.details{
+    font-size: 1em;
+    //font-family: @serifFontFamily;
+    color: @grayDeep;
+    text-align: center;
+    padding: 0 .25em;
+}
+ul.inline li.span3{
+    padding: .25em 1em;
+}
+.border-me + .border-me{
+    border-top: 1px dotted @grayLighter;
+}
+ul.inpage-nav{
+    li{
+        border-right: 1px solid @grayLight;
+        margin-right: .25em;
+        &:last-child{
+            border-right: none;
+            margin-right: 0;
+        }
+    }
+}
+.video-player {
+    max-width: 100%;
+    margin-bottom: 1em;
+}

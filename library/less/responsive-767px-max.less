@@ -1,0 +1,303 @@
+//
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+@media (max-width: 1199px) {
+    html, body{
+        font-size: 87.5%;
+    }
+    #sunburst{
+        background-position: 42% 100%;
+        min-height: 125px;
+        padding-bottom: 1em;
+    }
+}
+@media (max-width: 979px) {
+   #sunburst{
+        background-position: -610px -270px;
+        min-height: 125px;
+        padding-bottom: 1em;
+        //background-attachment: fixed;
+    }
+    .container{
+        width: auto;
+    }
+    #inner-header, #inner-footer{
+        margin-left: 1em;
+        margin-right: 1em;
+        width: auto;
+    }
+}
+@media (max-width: 767px) {
+  html, body{
+        font-size: 100%;
+    }
+    #rollinghills{
+        background-size: 375px 90px;
+        padding-top: 60px;
+    }
+    #logo{
+        img{
+            max-width: 80%;
+        }
+    }
+    #sunburst{
+        background-position: -280px -100px;
+        min-height: 75px;
+        background-size: 1200px 200px;
+    }
+    .hero-unit{
+        margin-bottom: 0;
+    }
+    .carousel-swirl{
+        display: none;
+    }
+    .carousel-caption{
+        position: relative;
+        padding: .5em 1em;
+    }
+    #utility{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        .utility-collapse{
+            height: 0;
+            background: @yellow;
+            }
+        .utility-search{
+            padding: 1em;
+            margin: 0;
+            input.search-field{
+                width: 100%;
+            }
+        }
+        .btn-search{
+            clear: both;
+        }
+    }
+    #inner-header{
+        min-height: 75px;
+    }
+    #branding #logo{
+        top: 25px;
+    }
+    #inner-wrap{
+        padding: 1em;
+    }
+    ul.inline li.span3{
+        float: left;
+        width: 22%;
+        margin-right: 3%;
+    }
+  // Negative indent the now static "fixed" navbar
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  // Remove padding on container given explicit padding set on body
+  .container-fluid {
+    padding: 0;
+  }
+  
+  // TYPOGRAPHY
+  // ----------
+  // Reset horizontal dl
+  .dl-horizontal {
+    dt {
+      float: none;
+      clear: none;
+      width: auto;
+      text-align: left;
+    }
+    dd {
+      margin-left: 0;
+    }
+  }
+
+  // GRID & CONTAINERS
+  // -----------------
+  // Remove width from containers
+  .container {
+    width: auto;
+  }
+  // Fluid rows
+  .row-fluid {
+    width: 100%;
+  }
+  // Undo negative margin on rows and thumbnails
+  .row,
+  .thumbnails {
+    margin-left: 0;
+  }
+  .thumbnails > li {
+    float: none;
+    margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
+  }
+  // Make all grid-sized elements block level again
+  [class*="span"],
+  .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
+  .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    .box-sizing(border-box);
+  }
+  .span12,
+  .row-fluid .span12 {
+    width: 100%;
+    .box-sizing(border-box);
+  }
+  .row-fluid [class*="offset"]:first-child {
+    margin-left: 0;
+  }
+
+  // FORM FIELDS
+  // -----------
+  // Make span* classes full width
+  .input-large,
+  .input-xlarge,
+  .input-xxlarge,
+  input[class*="span"],
+  select[class*="span"],
+  textarea[class*="span"],
+  .uneditable-input {
+    .input-block-level();
+  }
+  // But don't let it screw up prepend/append inputs
+  .input-prepend input,
+  .input-append input,
+  .input-prepend input[class*="span"],
+  .input-append input[class*="span"] {
+    display: inline-block; // redeclare so they don't wrap to new lines
+    width: auto;
+  }
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    position: fixed;
+    top:   20px;
+    left:  20px;
+    right: 20px;
+    width: auto;
+    margin: 0;
+    &.fade  { top: -100px; }
+    &.fade.in { top: 20px; }
+  }
+  [class*="span"].mobile1, [class*="span"].mobile2, [class*="span"].mobile3, [class*="span"].mobile4{
+      float: left !important;
+  }
+  [class*="span"].mobile1{
+      width: 22% !important;
+      margin-right: 3% !important;
+  }
+  [class*="span"].mobile2{
+      width: 47% !important;
+      margin-right: 3% !important;
+  }
+  [class*="span"].mobile3{
+      width: 72% !important;
+      margin-right: 3% !important;
+  }
+  [class*="span"].mobile4{
+      width: 97% !important;
+      margin-right: 3% !important;
+  }
+  .thumbnail{
+      width: auto;
+      margin: 0 auto 0;
+  }
+  .details{
+      font-size: @fontSizeMini;
+  }
+}
+
+
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+
+  // Smooth out the collapsing/expanding nav
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
+  }
+
+  // Block level the page header small tag for readability
+  .page-header h1 small {
+    display: block;
+    line-height: @baseLineHeight;
+  }
+
+  // Update checkboxes for iOS
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+
+  // Remove the horizontal form styles
+  .form-horizontal {
+    .control-label {
+      float: none;
+      width: auto;
+      padding-top: 0;
+      text-align: left;
+    }
+    // Move over all input controls and content
+    .controls {
+      margin-left: 0;
+    }
+    // Move the options list down to align with labels
+    .control-list {
+      padding-top: 0; // has to be padding because margin collaspes
+    }
+    // Move over buttons in .form-actions to align with .controls
+    .form-actions {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  // Medias
+  // Reset float and spacing to stack
+  .media .pull-left,
+  .media .pull-right  {
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  // Remove side margins since we stack instead of indent
+  .media-object {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    top:   10px;
+    left:  10px;
+    right: 10px;
+  }
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+
+  // Carousel
+  .carousel-caption {
+    position: static;
+  }
+    ul.inline li.major{
+        width: 24%;
+    }
+    ul.inline li.minor{
+        display: none;
+    }
+}

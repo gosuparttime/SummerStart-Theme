@@ -1,0 +1,13 @@
+@media print {
+  #myCarousel,
+  #banner-image,
+  .menu,
+  .btn-navbar,
+  #seal,
+  #menu-main-navigation {
+    display: none;
+  }
+  h1 a#logo {
+    font-size: 12px;
+  }
+}
